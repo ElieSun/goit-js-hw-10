@@ -36,7 +36,7 @@ function onError (err) {
 
 function displayCountryList(countries)
 {
-    length = countries.length
+    let length = countries.length
     if (length === 1) {
         const markup = countries.map((country) => {
         let language = Object.values(country.languages).join(', ')
