@@ -11,7 +11,7 @@ const searchCountries = document.querySelector("#search-box");
 searchCountries.addEventListener("input", debounce(onSearch, DEBOUNCE_DELAY))
 
 function onSearch (event) {
-    country = this.value.trim();
+    let country = this.value.trim();
         
     if (country === '') {
         return ;
