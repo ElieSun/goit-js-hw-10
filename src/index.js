@@ -39,8 +39,7 @@ function displayCountryList(countries)
     length = countries.length
     if (length === 1) {
         const markup = countries.map((country) => {
-        // language = Object.values(country.languages).join(', ')
-        language = 'test';
+        let language = Object.values(country.languages).join(', ')
           return `<li>
               <div><img src='${country.flags.svg}' alt='flag'><span>${country.name.official}<span></div> 
               <p><b>Capital</b>: ${country.capital}</p>
