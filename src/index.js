@@ -18,8 +18,7 @@ function onSearch (event) {
     }
     let info = fetchCountries(country)
     .then(data => displayCountryList(data))
-    // .catch(err => console.log(err));
-    .catch(()=>{
+    .catch(() => {
         Notify.failure("Oops, there is no country with that name")
     })
 }
@@ -40,7 +39,8 @@ function displayCountryList(countries)
     length = countries.length
     if (length === 1) {
         const markup = countries.map((country) => {
-        language = Object.values(country.languages).join(', ')
+        // language = Object.values(country.languages).join(', ')
+        language = 'test';
           return `<li>
               <div><img src='${country.flags.svg}' alt='flag'><span>${country.name.official}<span></div> 
               <p><b>Capital</b>: ${country.capital}</p>

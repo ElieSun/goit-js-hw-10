@@ -1,14 +1,14 @@
 
 
 function fetchCountries(name) {
-    const filter= "name,capital,population,flags,languages"
+    const filter = "name,capital,population,flags,languages"
     return fetch(`https://restcountries.com/v3.1/name/${name}/?${filter}`).then(response => {
         if (!response.ok) {
             throw new Error(response.status);
         }
 
         return response.json();
-        })
+    })
 };
 
 export {fetchCountries};
